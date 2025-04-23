@@ -1,9 +1,11 @@
 package com.leo.chatSpec.models;
 
-import org.springframework.lang.NonNull;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 public class User {
-	@NonNull
+	@NotNull
+	@NotEmpty
 	private String seshId;
 	private String server;
 	

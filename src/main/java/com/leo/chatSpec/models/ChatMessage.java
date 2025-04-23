@@ -1,11 +1,15 @@
 package com.leo.chatSpec.models;
 
-import org.springframework.lang.NonNull;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 public class ChatMessage{
-	@NonNull
+	@NotNull
 	private String content;
-	@NonNull
+	@NotNull
+	@NotBlank
+	@NotEmpty
 	private String recipient;
 	
 	public ChatMessage(String content, String recipient) {
